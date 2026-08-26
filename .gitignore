@@ -1,0 +1,5 @@
+#ignorar vscode
+.vscode/
+
+#ignorar el ejecutable main
+main

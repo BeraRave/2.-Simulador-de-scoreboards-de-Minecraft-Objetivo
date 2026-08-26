@@ -1,0 +1,21 @@
+Recrear el sistema de scoreboards de minecraft, para ello voy a ocupar aprender los siguiente:
+
+    1. aprender map en c++ para manejar la estructura comun de un scoreboard(usuario y puntos).
+    2. aprender como hacer una base de datos y de que manera adaptarlo a como lo ocupo(.txt).
+
+y seguir los siguientes pasos para lograrlo:
+
+    1. crear la estructura para manejar el scoreboard
+    2. crear funciones "add" y "remove" para manejar datos basicos del scoreboard
+    3. crear una funcion para imprimir un diseño decente en terminal
+    4. crear la funcion para leer/reescribir a un archivo(prob. txt) para guardar el scoreboard
+    5. modificar la estructura del scoreboard para limitar esta misma y tener mejor control
+    6. crear(de alguna manera) una tienda virtual para gastar los puntos
+
+V.0.0.1-.
+    - cree el map del scoreboard con el siguiente formato:
+        "std::map <std::string nombre, long long score> scoreboard"
+    - cree el primer diseño de impresion del score con el siguiente formato:
+        "===========================
+         nombre    :   score
+         ==========================="
