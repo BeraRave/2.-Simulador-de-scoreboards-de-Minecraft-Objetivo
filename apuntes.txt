@@ -19,3 +19,19 @@ V.0.0.1-.
         "===========================
          nombre    :   score
          ==========================="
+
+V.0.0.2-.
+    -cree los archivos "funciones.h" y "funciones.cpp" para controlar los comandos
+    -intente crear la funcion "add" pero no encuentro la manera de "modificar" el scoreboard
+     desde el archivo "funciones.h" :p
+    -modifique(porfin xd) el archivo "config.h" para declarar el map del scoreboard y sea "global"
+    -logre que la funcion "add" modificara la variable "scoreboard" original
+    -hice lo mismo para la funcion "remove"(copia y pega de add)
+    -de una vez hice la funcion "mostrarScoreboard" con todo el diseño :p
+    -pos valio, no ejecuta el proyecto :p
+    -cambie el archivo "config.h" porque al parecer se declaraba varias veces una variable
+    -cree el archivo "config.cpp" para separar la forma de existencia de variables
+    -pos tampoco funciono, no ejecuta el proyecto
+    -aprendi que para copilar y ejecutar correctamente mi proyecto, tengo que hacerlo por
+     separado en terminal, primero compilo el proyecto con "g++ *.cpp -o main" y
+     despues ejecuto "./main" :p

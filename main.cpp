@@ -2,32 +2,22 @@
 #include <map>
 #include <string>
 #include "config.h"
+#include "funciones.h"
 
 int main() {
-
-    std::map <std::string,long long> scoreboard;
 
     std::string nombre;
     long long score;
 
     std::cin >> nombre >> score;
 
-    scoreboard[nombre] += score;
-
-    std::cout << "Scoreboard:" << scoreboard[nombre] << std::endl;
+    add(nombre, score, scoreboard);
 
     std::cin >> nombre >> score;
 
-    scoreboard[nombre] += score;
+    remove(nombre, score, scoreboard);
 
-    std::cout << "Scoreboard:" << scoreboard[nombre] << std::endl;
+    mostrarScoreboard(scoreboard);
 
-    std::cout << "===========================" << std::endl;
-
-    for(const auto& A : scoreboard){
-        std::cout << A.first << "\t:\t" << A.second << std::endl;
-    }
-
-    std::cout << "===========================" << std::endl;
 
 }
