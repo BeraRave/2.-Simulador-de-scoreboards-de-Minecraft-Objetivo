@@ -3,3 +3,6 @@
 
 #ignorar el ejecutable main
 main
+
+#ignorar archivos resultantes del programa
+scoreboard.txt

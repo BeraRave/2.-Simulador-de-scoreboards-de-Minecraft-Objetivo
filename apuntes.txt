@@ -35,3 +35,20 @@ V.0.0.2-.
     -aprendi que para copilar y ejecutar correctamente mi proyecto, tengo que hacerlo por
      separado en terminal, primero compilo el proyecto con "g++ *.cpp -o main" y
      despues ejecuto "./main" :p
+
+V.0.1.0-.
+    -regrese despues de 2 semanas, a seguir con el proyecto :3
+    -voy a crear una funcion para leer y escribir un archivo de texto para guardar los datos
+     del scoreboard :3
+    -encontre que la libreria <fstream> permite leer y escribir :3
+    -cree la funcion de lectura llamada "leerScoreboard" este recibe la variable por referencia
+     del scoreboard(acabo de aprender que las variables con & se les llama asi)
+     la funcion abre el archivo "scoreboard.txt"
+     la funcion comprueba que el archivo se abrio correctamente
+     y este empieza a leer el contenido, al terminar cierra el archivo.
+    -tambien cree la funcion de escritura llamada "escribirScoreboard" este recibe
+     la variable por referencia constante del scoreboard 
+     la funcion abre/crea el archivo "scoreboard.txt"
+     y empieza a escribir/sobreescribir el contenido
+     al terminar cierra el archivo
+    -funciono todo a la perfeccion :3 (o mas o menos xd)

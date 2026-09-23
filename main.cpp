@@ -1,10 +1,13 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <fstream>
 #include "config.h"
 #include "funciones.h"
 
 int main() {
+
+    leerScoreboard(scoreboard);
 
     std::string nombre;
     long long score;
@@ -19,5 +22,6 @@ int main() {
 
     mostrarScoreboard(scoreboard);
 
+    escribirScoreboard(scoreboard);
 
 }

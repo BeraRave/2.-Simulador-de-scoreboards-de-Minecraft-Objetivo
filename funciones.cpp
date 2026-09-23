@@ -2,6 +2,7 @@
 #include <string>
 #include <map>
 #include <iostream>
+#include <fstream>
 
 void add(std::string nombre, long long score, std::map<std::string,long long>& scoreboard) {
     scoreboard[nombre] += score;
@@ -22,4 +23,36 @@ void mostrarScoreboard(const std::map<std::string,long long>& scoreboard) {
 
     std::cout << "===========================" << std::endl;
 
+}
+
+void leerScoreboard(std::map<std::string,long long>& scoreboard) {
+    std::ifstream archivo("scoreboard.txt");
+
+    if (!archivo.is_open()) {
+        std::cout << "No se pudo abrir el archivo.\n";
+        return;
+    }
+    std::string nombre;
+    long long score;
+
+    while (archivo >> nombre >> score) {
+        scoreboard[nombre] = score;
+    }
+
+    archivo.close();
+}
+
+void escribirScoreboard(const std::map<std::string,long long>& scoreboard) {
+    std::ofstream archivo("scoreboard.txt");
+
+    if (!archivo.is_open()) {
+        std::cout << "No se pudo abrir el archivo.\n";
+        return;
+    }
+
+    for (const auto& A : scoreboard) {
+        archivo << A.first << " " << A.second << std::endl;
+    }
+
+    archivo.close();
 }
