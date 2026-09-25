@@ -52,3 +52,54 @@ V.0.1.0-.
      y empieza a escribir/sobreescribir el contenido
      al terminar cierra el archivo
     -funciono todo a la perfeccion :3 (o mas o menos xd)
+
+V.0.1.1-.
+    -investigando un poco el comando scoreboard de minecraft mas exactamente los argumentos
+     de "player" estos tienen comandos que pienso agregar:
+     "add": ya esta puesto asi que nada, solo confirme el comportamiento con numeros negativos
+            estos simplemente los resta.
+     "remove": ya esta puestos asi que nada, solo confirme el comportamiento con numeros
+            negativos estos simplemente los suma.
+     "list": enlista todas las puntuaciones, asi que solo cambiaria el nombre de la funcion
+            mostrarScoreboard a listScoreboard.
+     "get": este regresa el punteje de un jugador.
+     "set": establece el puntaje de un jugador, ya sea creandolo o sobreescribiendolo.
+     "reset": borra el puntaje del jugador, borrando tambien el jugador del scoreboard.
+    -hay otros pero no los considero necesarios.
+    -asi que empezare a crear las funciones, y usar la terminal para ejecutar los comandos
+    -cree todas la funciones nuevas, incluso modifique otras para mejor entendimiento
+    -en el main.cpp puse texto de entrada para explicar brebemente el programa
+    -luego la funcion de leerScoreboard por si existe el archivo
+    -cree una variable string llamada salida con un texto defaul "holi"
+     para controlar la entrada y salida del programa
+    -cree una varible char llamada comando con el caracter 0
+     para controlar los comandos y mostrar una lista de comandos
+    -use un do while con un switch con 10 cases, usando el char comando para escoger
+    -tarde en como resolver la salida del programa porque la opcion 9
+     que es la que se encarga de cambiar la varianle salida
+     porque al salir del switch este pedia un comando y no era logico que despues de pedir
+     salir del programa pida un comando y depues salga del programa, estuve moviendo la
+     entrada de comando hacia varias partes, hasta que por fin se me ocurrio un solucion obvia
+     un if verificando la salida antes de pedir un comando xd
+    -y ya es todo por esta version :3
+    -mentira, probando el programa, al ejecutar el comando le leerScoreboard
+     este no borra lo antes modificado un ejemplo:
+     ===========================
+     rogelio :       -600
+     telo    :       960
+     ===========================
+     despues agrego a bera con 60 y borro a rogelio
+     ===========================
+     bera    :       60
+     telo    :       960
+     ===========================
+     y vuelvo a leer el scoreboard, este no se borra, sino que se sobreescribe
+     ===========================
+     bera    :       60
+     rogelio :       -600
+     telo    :       960
+     ===========================
+    -voy arreglar eso
+    -yap, agrege un .clear a la funcion de leerScoreboard para borrar todo el map
+     para despues volverlo a llenar :3
+    -ahora si creo que ya quedo esta version xd
