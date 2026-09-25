@@ -5,4 +5,7 @@
 main
 
 #ignorar archivos resultantes del programa
-scoreboard.txt
+*.txt
+
+#a exepcion de apuntes.txt
+!apuntes.txt

@@ -103,3 +103,33 @@ V.0.1.1-.
     -yap, agrege un .clear a la funcion de leerScoreboard para borrar todo el map
      para despues volverlo a llenar :3
     -ahora si creo que ya quedo esta version xd
+
+V.0.2.0-.
+    -se me olvido mencionar en la anterior version que la varible "nombre" fue cambiada por "jugador"
+    -ahora voy hacer que el programa pueda crear/cambiar varios scoreboards
+    -voy a borrar los archivos config.h y config.cpp porque ya no son necesarios
+    -borrar el include de config en main.cpp
+    -declarar la variable scoreboard en el main.cpp
+    -voy a cambiar el texto de interfaz de la terminal para pedir abrir un archivo o 
+     crear un archivo
+    -ya cambie el texto ahora modificare la funciones leerScoreboard y escribirScoreboard
+     para pedir un nombre de archivo, y que al nombre obtenido le agrege .txt
+    -estoy considerando cambiar los nombres de la funciones leer y escribir a algo mas intuitivo
+     como cargar y guardar, por ahora lo dejare asi.
+    -ya modifique las funciones de leer y escribir
+    -implemente 2 opciones de inicio, leer para abrir o leer un scoreboard ya existente
+     y crear para escribir o crear un scoreboard nuevo
+    -cambie la varible salir de string a bool para mejor entendimiento
+    -cree la variable bool modificado para al momente de salir/cambiar preguntar si se desea guardar
+     el scoreboard
+    -puse la varible modificado = true cuando se modifique el scoreboard con un comando
+     y modificado = false cuando se escriba/lea/cambie el scoreboard
+    -el comando listScoreboard antes de imprimir el scoreboard, imprime el nombre del scoreboard
+    -agrege la opcion/comando "c" para cambiar de scoreboard, si hay cambios en el scoreboard
+     pregunta si se desea guardar
+    -uy encontre un error en la opcion c, este solicita el nombre del scoreboard y luego lo lee...
+     pero y si no existe?
+    -cambie el el tipo de funcion de leerScoreboard a bool para verificar si existe o no el scoreboard
+    -si devuelve false, borra el scoreboard y se crea uno nuevo
+    -creo que ya esta, voy a probarlo :3
+    -yes, no encontre ningun error :0

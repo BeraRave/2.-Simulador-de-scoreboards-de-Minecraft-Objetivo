@@ -26,12 +26,13 @@ void listScoreboard(const std::map<std::string,long long>& scoreboard) {
 
 }
 
-void leerScoreboard(std::map<std::string,long long>& scoreboard) {
-    std::ifstream archivo("scoreboard.txt");
+bool leerScoreboard(std::map<std::string,long long>& scoreboard, std::string filename) {
+    filename += ".txt";
+    std::ifstream archivo(filename);
 
     if (!archivo.is_open()) {
         std::cout << "No se pudo abrir el archivo.\n";
-        return;
+        return false;
     }
 
     scoreboard.clear();
@@ -43,12 +44,14 @@ void leerScoreboard(std::map<std::string,long long>& scoreboard) {
         scoreboard[nombre] = score;
     }
 
-    std::cout << "Archivo de scoreboard leído correctamente." << std::endl;
+    std::cout << "Archivo "<< filename << " leído correctamente." << std::endl;
     archivo.close();
+    return true;
 }
 
-void escribirScoreboard(const std::map<std::string,long long>& scoreboard) {
-    std::ofstream archivo("scoreboard.txt");
+void escribirScoreboard(const std::map<std::string,long long>& scoreboard, std::string filename) {
+    filename += ".txt";
+    std::ofstream archivo(filename);
 
     if (!archivo.is_open()) {
         std::cout << "No se pudo abrir el archivo.\n";
@@ -59,6 +62,7 @@ void escribirScoreboard(const std::map<std::string,long long>& scoreboard) {
         archivo << A.first << " " << A.second << std::endl;
     }
 
+    std::cout << "Archivo "<< filename << " escrito correctamente." << std::endl;
     archivo.close();
 }
 
@@ -84,3 +88,4 @@ void resetScoreboard(std::map<std::string,long long>& scoreboard, std::string ju
         std::cout << "Jugador no encontrado en el scoreboard." << std::endl;
     }
 }
+
