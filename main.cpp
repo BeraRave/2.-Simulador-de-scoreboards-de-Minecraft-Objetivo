@@ -4,11 +4,11 @@
 #include <fstream>
 #include "funciones.h"
 
-std::map<std::string,long long> scoreboard;
-std::string filename;
-bool modificado = false;
-
 int main() {
+
+    std::map<std::string,long long> scoreboard;
+    std::string filename;
+    bool modificado = false;
 
     std::cout << "Bienvenido al simulador de scoreboards de Minecraft." << std::endl;
     std::cout << "Este programa permite simular un scoreboard de Minecraft, permitiendo agregar, eliminar y listar jugadores y sus puntajes." << std::endl;
@@ -62,12 +62,14 @@ int main() {
                 listScoreboard(scoreboard);
                 break;
             case '4':
-                leerScoreboard(scoreboard, filename);
-                modificado = false;
+                if(leerScoreboard(scoreboard, filename)) {
+                    modificado = false;
+                }
                 break;
             case '5':
-                escribirScoreboard(scoreboard, filename);
-                modificado = false;
+                if(escribirScoreboard(scoreboard, filename)) {
+                    modificado = false;
+                }
                 break;
             case '6': {
                 std::cout << "Ingrese el nombre del jugador: ";

@@ -49,13 +49,13 @@ bool leerScoreboard(std::map<std::string,long long>& scoreboard, std::string fil
     return true;
 }
 
-void escribirScoreboard(const std::map<std::string,long long>& scoreboard, std::string filename) {
+bool escribirScoreboard(const std::map<std::string,long long>& scoreboard, std::string filename) {
     filename += ".txt";
     std::ofstream archivo(filename);
 
     if (!archivo.is_open()) {
         std::cout << "No se pudo abrir el archivo.\n";
-        return;
+        return false;
     }
 
     for (const auto& A : scoreboard) {
@@ -64,6 +64,7 @@ void escribirScoreboard(const std::map<std::string,long long>& scoreboard, std::
 
     std::cout << "Archivo "<< filename << " escrito correctamente." << std::endl;
     archivo.close();
+    return true;
 }
 
 void getScoreboard(const std::map<std::string,long long>& scoreboard, std::string jugador) {

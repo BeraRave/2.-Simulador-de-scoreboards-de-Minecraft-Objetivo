@@ -133,3 +133,14 @@ V.0.2.0-.
     -si devuelve false, borra el scoreboard y se crea uno nuevo
     -creo que ya esta, voy a probarlo :3
     -yes, no encontre ningun error :0
+
+V.0.2.1-.
+    -usare este comando para compilar de ahora en adelante :3
+     g++ -Wall -Wextra -std=c++17 *.cpp -o main
+    -corregi un pequeño error en la funciones leer y escribir, al momento de hacer cualquiera
+     de las 2, si estas fallan, la variable modificado se vuelve false, cambiare el tipo de
+     funcion de escribir a bool al igual de leer, si sale bien, modificado false, y si sale mal
+     modificado se queda igual
+    -baje las variables: scoreboard, filename y modificado dentro del main osea de variables
+     globales a "locales"(creo que asi se llamaban)
+    -y ya :3
