@@ -144,3 +144,21 @@ V.0.2.1-.
     -baje las variables: scoreboard, filename y modificado dentro del main osea de variables
      globales a "locales"(creo que asi se llamaban)
     -y ya :3
+
+V.0.2.2-.
+    -voy a factoizar y modular los archivos y funciones del proyecto,
+     primero movere y transformare el switch en una funcion para evitar ocupar mucho espacio
+     en main :3
+    -ya, movi todo el switch a funciones y acorte algunos impresiones del switch
+    -empezare a crear varios archivos para separar las funciones, nose si siga siendo conveniente
+     crear .h por cada .cpp
+    -ya quedo, main quedo mas recucido y ahora funciones_main quedo con 100+ lineas :o
+    -voy a compilarlo y ver que pasa 
+    -ok, fallo :3; por alguna razon todas las funciones de main y scoreboard quedan sin definir :3
+     porque? quien sabe xd
+    -ya vi que era xd, la ia que me autocompleta el codigo, al momento de crear los .h añadio 
+     cosas en los parametro filename y jugador de las funciones leer y get
+     poniendo const y & a los parametro cuando no son necesarios,
+     filename no ocupa const ni & porque es una una varible que solo se modifica dentro de leer
+     y jugador aunque se podria usar const y & se lo quite para ahorrar escritura :3
+    -ahora si ya quedo la factorizacion y modulacion del proyecto :o

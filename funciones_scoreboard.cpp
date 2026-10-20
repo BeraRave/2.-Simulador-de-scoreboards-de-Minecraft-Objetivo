@@ -1,15 +1,15 @@
-#include "funciones.h"
-#include <string>
-#include <map>
 #include <iostream>
+#include <map>
+#include <string>
 #include <fstream>
+#include "funciones_scoreboard.h"
 
-void add(std::string jugador, long long score, std::map<std::string,long long>& scoreboard) {
+void add(const std::string& jugador, long long score, std::map<std::string, long long>& scoreboard) {
     scoreboard[jugador] += score;
     std::cout << "Se agrego " << score << " puntos a " << jugador << ". Puntaje total: " << scoreboard[jugador] << std::endl;
 }
 
-void remove(std::string jugador, long long score, std::map<std::string,long long>& scoreboard) {
+void remove(const std::string& jugador, long long score, std::map<std::string, long long>& scoreboard) {
     scoreboard[jugador] -= score;
     std::cout << "Se removieron " << score << " puntos de " << jugador << ". Puntaje total: " << scoreboard[jugador] << std::endl;
 }
@@ -89,4 +89,3 @@ void resetScoreboard(std::map<std::string,long long>& scoreboard, std::string ju
         std::cout << "Jugador no encontrado en el scoreboard." << std::endl;
     }
 }
-
